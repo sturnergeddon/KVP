@@ -1,0 +1,38 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.paircontainer {
+  width: 30%;
+  margin: 0 auto;
+  border: 3px solid blueviolet;
+  height: 400px;
+}
+
+.key {
+  /* display: flex;
+  height: 20px;
+  align-items: flex-start;*/
+  float: left;
+  width: 40%;
+  border: 1px solid red;
+  margin: 2px;
+}
+
+.value {
+  float: right;
+  width: 57%;
+  border: 1px solid green;
+  margin: 2px;
+}
+
+ul li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+}
