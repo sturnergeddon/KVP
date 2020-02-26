@@ -7,24 +7,31 @@
   width: 30%;
   margin: 0 auto;
   border: 3px solid blueviolet;
-  height: 400px;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .key {
   /* display: flex;
   height: 20px;
   align-items: flex-start;*/
-  float: left;
   width: 40%;
   border: 1px solid red;
   margin: 2px;
+  order: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .value {
-  float: right;
-  width: 57%;
+  width: 40%;
   border: 1px solid green;
   margin: 2px;
+  order: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 ul li {
@@ -35,4 +42,13 @@ ul li {
 
 ul {
   margin: 0;
+}
+
+h4 {
+  clear: both;
+  margin: 20px 10px;
+}
+
+.icon {
+  color: #febf13;
 }

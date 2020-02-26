@@ -1,22 +1,35 @@
 import React from "react";
 import "./styles.css";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+library.add(faHome);
 
 const data = [
   {
-    component: "First",
+    component: <div>First (Div)</div>,
     id: 1
   },
   {
-    component: "Second",
+    component: (
+      <a href="http://www.bbc.co.uk" target="_blank">
+        Link test
+      </a>
+    ),
     id: 2
   },
   {
-    component: "Third",
+    component: <FontAwesomeIcon icon={faHome} size="lg" className="icon" />,
     id: 3
   },
   {
-    component: "Forth",
+    component: [" 1 ", " 8 ", " Array", " of ", " Objects "],
     id: 4
+  },
+  {
+    component: "'string'",
+    id: 5
   }
 ];
 const KeyPair = () => (
@@ -26,12 +39,8 @@ const KeyPair = () => (
       <div className="App">
         <h1>Key Value Pair Table</h1>
         <h2>SubHeader</h2>
+        <h4>Section one</h4>
         <div className="paircontainer">
-          <h4>Section one</h4>
-          {data.map((dynamicComponent, i) => (
-            <Content key={i} componentData={dynamicComponent} />
-          ))}
-          <h4>Section Two</h4>
           {data.map((dynamicComponent, i) => (
             <Content key={i} componentData={dynamicComponent} />
           ))}
@@ -42,7 +51,6 @@ const KeyPair = () => (
 );
 
 const Content = function Content(...data) {
-  //console.log("dat spread", ...data);
   console.log("comp ", data[0].componentData.id);
 
   return (
